@@ -45,7 +45,8 @@ To start using AssistIQ, follow these steps:
 
 For environment variable setup, please refer to [Set Environment Variables Locally](./documentation/Extra/howToDetEnvVariables.md).
 
-In case you want to use locally hosted LLM, goto [Dev/Langchain Branch](https://github.com/ayushannand/AssistIQ/tree/Dev/Langchain) and refer the documentation there.
+Next, to use locally hosted LLM, goto [Setup Vicuna](./documentation/Python/VicunaSetup.md).
+
 ## Progress
 
 AssistIQ's development is divided into several phases, each bringing new features and improvements:

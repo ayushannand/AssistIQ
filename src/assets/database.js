@@ -1,9 +1,9 @@
 const customers = [
   {
     id: 1,
-    firstName: "Ayush",
-    lastName: "Anand",
-    email: "direct.ayush@gmail.com",
+    firstName: "Rahul",
+    lastName: "Sharma",
+    email: "rahul.sharma@example.com",
     address: {
       street: "123 Main Street",
       city: "Mumbai",
@@ -33,9 +33,9 @@ const customers = [
   },
   {
     id: 2,
-    firstName: "Aayuu",
-    lastName: "Sharma",
-    email: "aayuu@gmail.com",
+    firstName: "Priya",
+    lastName: "Patel",
+    email: "priya.patel@example.com",
     address: {
       street: "456 Elm Street",
       city: "Delhi",

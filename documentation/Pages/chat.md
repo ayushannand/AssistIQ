@@ -1,8 +1,8 @@
-## ChatPage Component Documentation
+# ChatPage Component Documentation
 
-The `ChatPage` component is a React functional component that provides a user interface for interacting with an Intelligent Virtual Assistant called AIVA. Users can input prompts or questions, and AIVA responds with answers based on the provided prompt and information about a customer identified by an email address. The component uses various UI elements, styles, and API calls to achieve this functionality.
+The `ChatPage` component is a React functional component that provides a user interface for interacting with AssistIQ, an Intelligent Virtual Assistant. Users can input prompts or questions, and AssistIQ responds with answers based on the provided prompt and customer information.
 
-### Usage
+## Usage
 
 To use the `ChatPage` component in your React application, follow these steps:
 
@@ -45,7 +45,7 @@ The `ChatPage` component defines the following methods:
 
 - `handleEmailChange`: This method is called when the user enters an email address. It sets the `identifier` state to the entered email, and the assistant responds with a message confirming the change.
 
-- `handleChatSubmit`: This method is called when the user submits the prompt or question. It triggers the conversation with AIVA, fetches the customer data based on the entered email, and sends the prompt to the AIVA API for processing. The assistant's response is appended to the `chatLog`.
+- `handleChatSubmit`: This method is called when the user submits the prompt or question. It triggers the conversation with AssistIQ, fetches the customer data based on the entered email, and sends the prompt to the AssistIQ API for processing. The assistant's response is appended to the `chatLog`.
 
 - `handleResetClick`: This method is called when the user clicks on the reset button. It prompts the user with a confirmation and reloads the page if confirmed, resetting the conversation.
 
@@ -54,9 +54,9 @@ The `ChatPage` component defines the following methods:
 The `ChatPage` component consists of the following UI elements and styles:
 
 - An input field for the user to enter prompts or questions.
-- A "Send" button to submit the input and trigger the conversation with AIVA. It displays a loading indicator while waiting for the response.
+- A "Send" button to submit the input and trigger the conversation with AssistIQ. It displays a loading indicator while waiting for the response.
 - A "Reset" button to clear the conversation log and reset the chat. It provides a confirmation dialog before resetting the conversation.
-- Chat log display that shows the conversation between the user and AIVA. Messages are displayed in a card-based layout, where user messages are displayed in an `InputCard` component, and assistant responses are displayed in an `OutputCard` component.
+- Chat log display that shows the conversation between the user and AssistIQ. Messages are displayed in a card-based layout, where user messages are displayed in an `InputCard` component, and assistant responses are displayed in an `OutputCard` component.
 
 ### Note
 
@@ -64,4 +64,7 @@ The `ChatPage` component consists of the following UI elements and styles:
 
 - The component relies on the `getCombinedData` function from the `apiWrapper.js` module to fetch customer data based on the email identifier. Make sure this function is implemented correctly and accessible in your application.
 
-- The AIVA interaction functionality is dependent on an AIVA API, which is not included in this code snippet. Ensure that the API endpoint for the AIVA service is correctly set up and that the assistant responds correctly based on the user's input.
+- The AssistIQ interaction functionality is dependent on an AssistIQ API, which is not included in this code snippet. Ensure that the API endpoint for the AssistIQ service is correctly set up and that the assistant responds correctly based on the user's input.
+
+
+

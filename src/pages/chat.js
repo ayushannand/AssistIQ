@@ -9,6 +9,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import styles from '../styles/chat.module.css';
 import OutputCard from '@/components/OutputCard.js';
 import InputCard from '@/components/InputCard.js';
+import getCustomer from "./api/getCustomer.js";
 
 export default function ChatPage() {
   const [chatLog, setChatLog] = useState([]);
@@ -49,13 +50,8 @@ export default function ChatPage() {
     
 
     try {
-      const queryParams = {};
-        queryParams.email = identifier;
-      const customerResponse = await axios.get('/api/customer', {
-        params: queryParams,
-      });
-      const { customer } = customerResponse.data;
-  
+      const customer = await getCustomer(identifier);
+
       const conversation = [
         ...chatLog,
         { role: 'user', content: prompt },
@@ -63,8 +59,11 @@ export default function ChatPage() {
   
       setChatLog(conversation);
   
-      const assistantResponse = await axios.post(`/api/query?email=${customer.email}`, { conversation });
-  
+      const assistantResponse = await axios.post(`/api/vicuna`, {
+        question: prompt,
+        customer: customer
+      });
+      
       if (assistantResponse.data.error) {
         throw new Error(assistantResponse.data.error);
       }
@@ -120,7 +119,7 @@ export default function ChatPage() {
           </div>
         ))}
       </div>
-      <h2 className='p-2 bg-yellow-100 text-center mx-[200px] rounded-lg mt-2 mb-[-2]'>Welcome to <span className='font-semibold'>Agent Intelligent Virtual Assistant - AIVA</span></h2>
+      <h2 className='p-2 bg-yellow-100 text-center mx-[200px] rounded-lg mt-2 mb-[-2]'>Welcome to <span className='font-semibold'>AssistIQ</span></h2>
     </div>
   );
   
