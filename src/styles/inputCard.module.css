@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #94D0CC;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 100%;
+  }
+  
+  .inputContent {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    word-wrap: break-word;
+  }
+  
+  .copyButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+  
+  .copyButton {
+    border-radius: 4px;
+    margin-top: -7px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.8s ease;
+  }
+  
+  .copyButton:hover {
+    background-color: #f2c2c2;
+  }
+  
+  .copyButton:focus {
+    outline: none;
+  }
+  

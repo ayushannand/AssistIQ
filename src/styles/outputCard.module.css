@@ -1,0 +1,106 @@
+.output-card{
+  background: #f3f1f1;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.card-container {
+  background-color: #f4ecec;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-wrap: break-word;
+  width: 100%;
+}
+
+.card-content {
+  color: #000000;
+  word-wrap: break-word;
+}
+
+.card-content {
+  white-space: pre-wrap;
+}
+
+.card-copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.card-container:hover .card-copy-button {
+  opacity: 1;
+}
+
+.key {
+  font-weight: bold;
+  color: #333;
+  margin: 10px;
+}
+
+.value {
+  color: #000000;
+  font-weight: 400;
+}
+
+.email-value {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #333;
+}
+
+.table-key {
+  font-weight: 700;
+  padding: 8px;
+  border: 1px solid #333;
+}
+
+.table-value {
+  padding: 8px;
+  border: 1px solid #333;
+}
+
+/* .toggle-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2px;
+
+  //Added to Tailwind classes
+} */
+
+
+.toggle-button {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: none;
+  outline: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-inline: 3px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 14px;
+}
+
+.toggle-button:hover {
+  background-color: #E0E0E0;
+}
+
+.toggle-button.active {
+  background-color: #333;
+  color: #FFFFFF;
+}
+
